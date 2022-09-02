@@ -1,0 +1,17 @@
+.CardBack {
+    padding-right: 34px;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc(286.3px - 34px);
+    height: calc(157px - 4px);
+    font-size: 11px;
+    color: white;
+    border-radius: 8px;
+    background-size: cover;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    transform: translate(27px, 30px);
+}
