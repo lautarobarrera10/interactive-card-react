@@ -1,0 +1,49 @@
+.FrontCard {
+    padding: 16px 20px 12px;
+    width: fit-content;
+    color: white;
+    border-radius: 8px;
+    background-size: cover;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.circle-container {
+    padding-bottom: 11px;
+    display: flex;
+    align-items: center;
+}
+
+.first-circle {
+    margin-right: 12px;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.second-circle {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.card-number {
+    width: 246.3px;
+    margin-bottom: 4px;
+    font-size: 22px;
+}
+
+.data-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+}
+
+.data-name {
+    display: block;
+    text-transform: uppercase;
+}
