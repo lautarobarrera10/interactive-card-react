@@ -1,0 +1,57 @@
+.Input-Text-Container {
+    width: 100%;
+}
+
+.Input-Text--Text {
+    margin-bottom: 6px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.Input-Text--Input {
+    box-sizing: border-box;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+.Input-Text--Input:focus {
+    outline: none;
+    border: 1px solid blue;
+}
+
+.special-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.special-input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.special-input {
+    width: 48%;
+}
+
+.special-inputandtext-container {
+    width: 49%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+
+@media only screen and (max-width: 374px) {
+    .cvc-container {
+        transform: translateY(20px);
+    }
+}

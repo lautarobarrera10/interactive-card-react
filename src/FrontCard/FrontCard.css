@@ -7,7 +7,7 @@
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-    transform: translate(-27px, -120px);
+    transform: translate(-25px, -120px);
 }
 
 .circle-container {
@@ -47,4 +47,11 @@
 .data-name {
     display: block;
     text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 374px) {
+    .FrontCard {
+        transform: translate(-10px, -120px);
+    }
 }

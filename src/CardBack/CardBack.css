@@ -13,5 +13,11 @@
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
-    transform: translate(27px, 30px);
+    transform: translate(25px, 30px);
+}
+
+@media only screen and (max-width: 374px){
+    .CardBack {
+        transform: translate(10px, 30px);
+    }
 }
