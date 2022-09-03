@@ -23,6 +23,10 @@
     border: 1px solid blue;
 }
 
+.Input-Text--Input::placeholder {
+    color: hsl(270, 3%, 87%);
+}
+
 .special-container {
     display: flex;
     justify-content: space-between;

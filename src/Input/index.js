@@ -5,12 +5,14 @@ function Input({
     type,
     text,
     placeholder,
+    onchange,
+    customClass
 }) {
     if (type === 'text' || type === 'number' || type === 'name') {
         return(
             <div className="Input-Text-Container">
                 <p className="Input-Text--Text">{text}</p>
-                <input className="Input-Text--Input" type={type} placeholder={placeholder} />
+                <input onChange={(event) => onchange(event.target.value)} className={`Input-Text--Input ${customClass}`} type={type} placeholder={placeholder} />
             </div>
         );
     }
