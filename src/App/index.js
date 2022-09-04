@@ -7,27 +7,24 @@ import { Input } from '../Input';
 import { Button } from '../Button';
 
 import { useApp } from './useApp';
+import { InputCardNumber } from '../InputCardNumber';
 
 function App() {
   const {
-    cardNumber, 
-    setCardNumber,
-    cardName,
-    setCardName,
-    cardMonth, 
-    setCardMonth,
-    cardYear, 
-    setCardYear,
-    cardCVC, 
-    setCardCVC,
+    cardNumber,
     onChangeCardNumber } = useApp();
   return (
     <div className="App">
       <Main>
         <CardBack />
       </Main>
-      <FrontCard />
+      <FrontCard
+        cardNumber={cardNumber}
+      />
       <Form>
+        <InputCardNumber
+          onChange={onChangeCardNumber}
+        />
         <Input 
           type={'name'}
           text={'Carholder Name'}
