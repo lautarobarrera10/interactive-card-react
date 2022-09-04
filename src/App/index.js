@@ -5,7 +5,7 @@ import { CardBack } from '../CardBack';
 import { Form } from '../Form';
 import { Button } from '../Button';
 
-import { useFrontCard } from './useFrontCard';
+import { useCards } from './useCards';
 import { InputCardNumber } from '../InputCardNumber';
 import { InputCardName } from '../InputCardName';
 import { InputContainer } from '../InputContainer';
@@ -17,23 +17,36 @@ function App() {
     cardNumber,
     onChangeCardNumber,
     cardName,
-    onChangeCardName
-  } = useFrontCard();
+    onChangeCardName,
+    expirationMonth,
+    onChangeExpirationMonth,
+    expirationYear,
+    onChangeExpirationYear,
+    CVC,
+    onChangeCVC
+  } = useCards();
   return (
     <div className="App">
       <Main>
-        <CardBack />
+        <CardBack cvc={CVC} />
       </Main>
       <FrontCard
         cardName={cardName}
         cardNumber={cardNumber}
+        expirationMonth={expirationMonth}
+        expirationYear={expirationYear}
       />
       <Form>
         <InputCardName onChange={onChangeCardName} />
         <InputCardNumber onChange={onChangeCardNumber} />
         <InputContainer>
-          <InputExpirationDate />
-          <InputCVC />
+          <InputExpirationDate 
+            onChangeExpirationMonth={onChangeExpirationMonth}
+            onChangeExpirationYear={onChangeExpirationYear}
+          />
+          <InputCVC 
+            onChange={onChangeCVC}
+          />
         </InputContainer>
         <Button> Confirmar </Button>
       </Form>

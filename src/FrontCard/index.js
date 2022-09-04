@@ -2,7 +2,7 @@ import React from "react";
 import './FrontCard.css';
 import bgCardFront from './bg-card-front.png';
 
-function FrontCard({cardName, cardNumber}){
+function FrontCard({cardName, cardNumber, expirationMonth, expirationYear}){
     return(
         <div className="FrontCard" style={{ 
             backgroundImage: `url("${bgCardFront}")` 
@@ -14,7 +14,7 @@ function FrontCard({cardName, cardNumber}){
             <p className="card-number">{cardNumber}</p>
             <div className="data-container">
                 <p className="data-name">{cardName}</p>
-                <p className="data-date">00/00</p>
+                <p className="data-date">{expirationMonth}/{expirationYear}</p>
             </div>
         </div>
     );

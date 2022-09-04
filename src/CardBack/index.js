@@ -2,12 +2,12 @@ import React from "react";
 import './CardBack.css';
 import bgCardBack from './bg-card-back.png';
 
-function CardBack() {
+function CardBack({cvc}) {
     return(
         <div className="CardBack" style={{ 
             backgroundImage: `url("${bgCardBack}")` 
           }}>
-            <p className="code-security">000</p>
+            <p className="code-security">{cvc}</p>
         </div>
     );
 }
