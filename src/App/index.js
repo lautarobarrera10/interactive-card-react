@@ -3,12 +3,14 @@ import { Main } from '../Main';
 import { FrontCard } from '../FrontCard';
 import { CardBack } from '../CardBack';
 import { Form } from '../Form';
-import { Input } from '../Input';
 import { Button } from '../Button';
 
 import { useFrontCard } from './useFrontCard';
 import { InputCardNumber } from '../InputCardNumber';
 import { InputCardName } from '../InputCardName';
+import { InputContainer } from '../InputContainer';
+import { InputExpirationDate } from '../InputExpirationDate';
+import { InputCVC } from '../InputCVC';
 
 function App() {
   const {
@@ -29,12 +31,11 @@ function App() {
       <Form>
         <InputCardName onChange={onChangeCardName} />
         <InputCardNumber onChange={onChangeCardNumber} />
-        <Input 
-          type={'special'}
-        />
-        <Button>
-          Confirm
-        </Button>
+        <InputContainer>
+          <InputExpirationDate />
+          <InputCVC />
+        </InputContainer>
+        <Button> Confirmar </Button>
       </Form>
     </div>
   );

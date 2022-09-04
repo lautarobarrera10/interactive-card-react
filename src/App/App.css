@@ -6,3 +6,31 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
 }
+
+/* Estilos bases para los labels */
+label {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+
+/* Estilos bases para los inputs */
+input {
+  margin: 6px 0 12px;
+  box-sizing: border-box;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid blue;
+}
+
+input::placeholder {
+  color: hsl(270, 3%, 87%);
+}

@@ -1,0 +1,12 @@
+.expiration-date-container {
+    width: 49%;
+}
+
+.date-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-container input {
+    width: 48%;
+}
