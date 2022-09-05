@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { Main } from '../Main';
 import { FrontCard } from '../FrontCard';
@@ -12,6 +13,8 @@ import { InputContainer } from '../InputContainer';
 import { InputExpirationDate } from '../InputExpirationDate';
 import { InputCVC } from '../InputCVC';
 
+import { useForm } from './useForm';
+
 function App() {
   const {
     cardNumber,
@@ -25,6 +28,14 @@ function App() {
     CVC,
     onChangeCVC
   } = useCards();
+
+  const {
+      completedForm,
+      onSubmitForm,
+      resetApp,
+      nameError
+  } = useForm();
+
   return (
     <div className="App">
       <Main>
@@ -36,8 +47,12 @@ function App() {
         expirationMonth={expirationMonth}
         expirationYear={expirationYear}
       />
-      <Form>
-        <InputCardName onChange={onChangeCardName} />
+      <Form
+        completedForm={completedForm}
+        onSubmitForm={onSubmitForm}
+        resetApp={resetApp}
+      >
+        <InputCardName onChange={onChangeCardName} nameError={nameError} />
         <InputCardNumber onChange={onChangeCardNumber} />
         <InputContainer>
           <InputExpirationDate 

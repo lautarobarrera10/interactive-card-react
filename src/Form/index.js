@@ -3,20 +3,19 @@ import './Form.css';
 import iconComplete from './icon-complete.svg';
 import { Button } from '../Button';
 
-function Form({children}) {
-    const [completedForm, setCompletedForm] = React.useState(true);
+function Form({children, completedForm, onSubmitForm, resetApp}) {
     if (completedForm) {
         return(
-            <div className="completed-container">
-                <img src={iconComplete}/>
+            <form onSubmit={resetApp} className="completed-container">
+                <img src={iconComplete} alt="icon-complete"/>
                 <h2 className="completed-title">¡Gracias!</h2>
                 <p className="completed-text">Hemos añadido los datos de su tarjeta</p>
                 <Button>Continuar</Button>
-            </div>
+            </form>
         );
     }
     return(
-        <form className="form">
+        <form className="form" onSubmit={onSubmitForm}>
             {children}
         </form>
     );

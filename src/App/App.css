@@ -35,6 +35,10 @@ input::placeholder {
   color: hsl(270, 3%, 87%);
 }
 
+input.input-error {
+  border-color: red;
+}
+
 
 /* Quitamos las flechas de los inputs de number */
 input[type=number]::-webkit-inner-spin-button, 
@@ -43,3 +47,13 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 input[type=number] { -moz-appearance:textfield; }
+
+
+/* Mensaje de error en inputs */
+.errorMessage {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: red;
+}
