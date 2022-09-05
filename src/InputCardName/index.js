@@ -7,7 +7,6 @@ function InputCardName({onChange, nameError}) {
     } else {
         inputErrorClass = '';
     }
-    console.log(nameError)
     return(
         <div>
             <label
@@ -16,6 +15,7 @@ function InputCardName({onChange, nameError}) {
             </label>
             {nameError && <p className="errorMessage">Introduce un nombre válido</p>}
             <input 
+                required
                 type={'name'}
                 id="input-card-name"
                 placeholder="Ej: Lautaro Barrera"

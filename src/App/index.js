@@ -33,7 +33,8 @@ function App() {
       completedForm,
       onSubmitForm,
       resetApp,
-      nameError
+      nameError,
+      numberError
   } = useForm();
 
   return (
@@ -53,7 +54,7 @@ function App() {
         resetApp={resetApp}
       >
         <InputCardName onChange={onChangeCardName} nameError={nameError} />
-        <InputCardNumber onChange={onChangeCardNumber} />
+        <InputCardNumber onChange={onChangeCardNumber} numberError={numberError} />
         <InputContainer>
           <InputExpirationDate 
             onChangeExpirationMonth={onChangeExpirationMonth}
