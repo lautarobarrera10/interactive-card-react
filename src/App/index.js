@@ -35,7 +35,8 @@ function App() {
       resetApp,
       nameError,
       numberError,
-      expirationDateError
+      expirationDateError,
+      CVCError
   } = useForm();
 
   return (
@@ -64,6 +65,7 @@ function App() {
           />
           <InputCVC 
             onChange={onChangeCVC}
+            CVCError={CVCError}
           />
         </InputContainer>
         <Button> Confirmar </Button>

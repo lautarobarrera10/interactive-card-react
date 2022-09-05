@@ -5,6 +5,7 @@ function useForm() {
     const [nameError, setNameError] = React.useState(false);
     const [numberError, setNumberError] = React.useState(false);
     const [expirationDateError, setExpirationDateError] = React.useState(false);
+    const [CVCError, setCVCError] = React.useState(false);
 
     const onSubmitForm = (event) => {
         // prevent default para evitar recargar la página
@@ -45,6 +46,17 @@ function useForm() {
         } else {
             setExpirationDateError(true);
         }
+
+        // Validación del CVC
+        const CVC = document.querySelector('#input-cvc');
+        const DOMCVC = CVC.value;
+        const CVCPattern = /^\d{3}$/; // 3 números
+        const CVCIsValid = CVCPattern.test(DOMCVC);
+        if (CVCIsValid) {
+            setCVCError(false);
+        } else {
+            setCVCError(true);
+        }
     }
 
     const resetApp = (event) => {
@@ -59,7 +71,8 @@ function useForm() {
         resetApp,
         nameError,
         numberError,
-        expirationDateError
+        expirationDateError,
+        CVCError
     });
 }
 
