@@ -92,10 +92,10 @@ function useCards() {
     }
  
     return({
-        cardNumber,
-        onChangeCardNumber,
         cardName,
         onChangeCardName,
+        cardNumber,
+        onChangeCardNumber,
         expirationMonth,
         onChangeExpirationMonth,
         expirationYear,
