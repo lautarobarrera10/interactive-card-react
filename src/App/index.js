@@ -34,7 +34,8 @@ function App() {
       onSubmitForm,
       resetApp,
       nameError,
-      numberError
+      numberError,
+      expirationDateError
   } = useForm();
 
   return (
@@ -59,6 +60,7 @@ function App() {
           <InputExpirationDate 
             onChangeExpirationMonth={onChangeExpirationMonth}
             onChangeExpirationYear={onChangeExpirationYear}
+            expirationDateError={expirationDateError}
           />
           <InputCVC 
             onChange={onChangeCVC}

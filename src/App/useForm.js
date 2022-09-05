@@ -4,6 +4,7 @@ function useForm() {
     const [completedForm, setCompleteForm] = React.useState(false);
     const [nameError, setNameError] = React.useState(false);
     const [numberError, setNumberError] = React.useState(false);
+    const [expirationDateError, setExpirationDateError] = React.useState(false);
 
     const onSubmitForm = (event) => {
         // prevent default para evitar recargar la página
@@ -31,6 +32,19 @@ function useForm() {
         } else {
             setNumberError(true);
         }
+
+        // Validación de la fecha de expiración
+        const expirationMonth = document.querySelector('#first-date-input');
+        const expirationYear = document.querySelector('#second-date-input');
+        const DOMExpirationMonth = expirationMonth.value;
+        const DOMExpirationYear = expirationYear.value;
+        const expirationDatePattern = /^\d{2}$/; // 2 números
+        const expirationDateIsValid = expirationDatePattern.test(DOMExpirationMonth) && expirationDatePattern.test(DOMExpirationYear);
+        if (expirationDateIsValid) {
+            setExpirationDateError(false);
+        } else {
+            setExpirationDateError(true);
+        }
     }
 
     const resetApp = (event) => {
@@ -44,7 +58,8 @@ function useForm() {
         onSubmitForm,
         resetApp,
         nameError,
-        numberError
+        numberError,
+        expirationDateError
     });
 }
 
