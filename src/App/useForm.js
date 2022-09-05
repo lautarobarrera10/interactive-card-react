@@ -10,8 +10,8 @@ function useForm() {
 
         const cardName = document.querySelector('#input-card-name');
         const DOMName = cardName.value;
-        const patron = /^[A-Z]+\s[A-Z]+$/i; // Nombre y apellido
-        const patron2 = /^[A-Z]+\s[A-Z]+\s[A-Z]+$/i; // Nombre, segundo nombre y apellido
+        const patron = /^[A-Z]{3,}\s[A-Z]{3,}$/i; // Nombre y apellido
+        const patron2 = /^[A-Z]{3,}\s[A-Z]{3,}\s[A-Z]{3,}$/i; // Nombre, segundo nombre y apellido
         const NameIsValid = patron.test(DOMName) || patron2.test(DOMName);
         
         if (NameIsValid) {
