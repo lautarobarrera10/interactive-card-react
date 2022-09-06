@@ -6,6 +6,7 @@ function useForm() {
     const [numberError, setNumberError] = React.useState(false);
     const [expirationDateError, setExpirationDateError] = React.useState(false);
     const [CVCError, setCVCError] = React.useState(false);
+    const [checkindForm, setCheckindForm] = React.useState(false);
 
     const validateName = () => {
         // Validación del nombre
@@ -46,44 +47,54 @@ function useForm() {
     }
 
     const onSubmitForm = (event) => {
-        // prevent default para evitar recargar la página
-        event.preventDefault();
-
-        // Validamos el nombre
-        const nameIsValid = validateName();
-        if (!nameIsValid) {
-            setNameError(true);
+        if (completedForm) {
+            window.location.reload();
         } else {
-            setNameError(false);
-        }
+            // Estado checkeando
+            setCheckindForm(true);
+            // prevent default para evitar recargar la página
+            event.preventDefault();
 
-        // Validamos el número de tarjeta
-        const numberIsValid = validateNumber();
-        if (!numberIsValid) {
-            setNumberError(true);
-        } else {
-            setNumberError(false);
-        }
+            setTimeout(() => {
+            // Validamos el nombre
+            const nameIsValid = validateName();
+            if (!nameIsValid) {
+                setNameError(true);
+            } else {
+                setNameError(false);
+            }
 
-        // Validamos el vencimiento
-        const expirationDateIsValid = validateExpirationDate();
-        if (!expirationDateIsValid) {
-            setExpirationDateError(true);
-        } else {
-            setExpirationDateError(false);
-        }
+            // Validamos el número de tarjeta
+            const numberIsValid = validateNumber();
+            if (!numberIsValid) {
+                setNumberError(true);
+            } else {
+                setNumberError(false);
+            }
 
-        // Validamos el CVC
-        const CVCIsValid = validateCVC();
-        if (!CVCIsValid) {
-            setCVCError(true);
-        } else {
-            setCVCError(false);
-        }
+            // Validamos el vencimiento
+            const expirationDateIsValid = validateExpirationDate();
+            if (!expirationDateIsValid) {
+                setExpirationDateError(true);
+            } else {
+                setExpirationDateError(false);
+            }
 
-        // Si todo está bien el estado de formulario completado pasa a verdadero
-        if (nameIsValid && numberIsValid && expirationDateIsValid && CVCIsValid) {
-            setCompleteForm(true);
+            // Validamos el CVC
+            const CVCIsValid = validateCVC();
+            if (!CVCIsValid) {
+                setCVCError(true);
+            } else {
+                setCVCError(false);
+            }
+
+            setCheckindForm(false);
+
+            // Si todo está bien el estado de formulario completado pasa a verdadero
+            if (nameIsValid && numberIsValid && expirationDateIsValid && CVCIsValid) {
+                setCompleteForm(true);
+            }
+            }, 1200);
         }
     }
 
@@ -93,7 +104,8 @@ function useForm() {
         nameError,
         numberError,
         expirationDateError,
-        CVCError
+        CVCError,
+        checkindForm
     });
 }
 

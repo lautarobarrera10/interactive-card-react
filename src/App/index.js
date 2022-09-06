@@ -36,7 +36,8 @@ function App() {
       nameError,
       numberError,
       expirationDateError,
-      CVCError
+      CVCError,
+      checkindForm
   } = useForm();
 
   return (
@@ -54,6 +55,7 @@ function App() {
         completedForm={completedForm}
         onSubmitForm={onSubmitForm}
         resetApp={resetApp}
+        checkindForm={checkindForm}
       >
         <InputCardName onChange={onChangeCardName} nameError={nameError} />
         <InputCardNumber onChange={onChangeCardNumber} numberError={numberError} />
