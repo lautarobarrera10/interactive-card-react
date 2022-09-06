@@ -14,7 +14,7 @@ function Form({children, completedForm, onSubmitForm, checkindForm}) {
     return(
         <form className={formClass} onSubmit={onSubmitForm}>
 
-            {checkindForm && <p className="checking-form-text">Validando la data...</p>}
+            {checkindForm && <p className="checking-form-text">Validando la información...</p>}
 
             {completedForm && 
             <React.Fragment>

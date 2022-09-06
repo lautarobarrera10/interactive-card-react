@@ -6,3 +6,11 @@ main {
     height: 240px;
     background-size: cover;
 }
+
+@media screen and (min-width: 1172px) {
+    main {
+        grid-area: main;
+        place-content: center;
+        height: 100vh;
+    }
+}

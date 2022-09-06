@@ -50,8 +50,16 @@
 }
 
 
-@media only screen and (max-width: 374px) {
+@media screen and (max-width: 374px) {
     .FrontCard {
         transform: translate(-10px, -120px);
+    }
+}
+
+@media screen and (min-width: 1172px) {
+    .FrontCard {
+        position: absolute;
+        top: 40%;
+        left: 280px;
     }
 }

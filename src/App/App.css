@@ -57,3 +57,12 @@ input[type=number] { -moz-appearance:textfield; }
   font-weight: 500;
   color: red;
 }
+
+@media screen and (min-width: 1172px) {
+  .App {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "main form";
+  }
+}
