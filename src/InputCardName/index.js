@@ -16,7 +16,7 @@ function InputCardName({onChange, nameError}) {
             {nameError && <p className="errorMessage">Introduce un nombre válido</p>}
             <input 
                 required
-                type={'name'}
+                type="text"
                 id="input-card-name"
                 placeholder="Ej: Lautaro Barrera"
                 onChange={(event) => onChange(event.target.value)}
