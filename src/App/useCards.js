@@ -8,7 +8,7 @@ function useCards() {
     const [CVC, setCVC] = React.useState('000');
 
     const onChangeCardName = (newValue) => {
-        // Limitamos la cantidad de carácteres a 25
+        // Limitamos la cantidad de caracteres a 25
         const cardNameInput = document.querySelector('#input-card-name');
         cardNameInput.addEventListener('input', () => {
             if (cardNameInput.value.length > 25) {
@@ -24,7 +24,7 @@ function useCards() {
     }
 
     const onChangeCardNumber = (newValue) => {
-        // Limitamos el número de carácteres en el input de card number
+        // Limitamos el número de caracteres en el input de card number
         const cardNumberInput = document.querySelector('#input-card-number');
         cardNumberInput.addEventListener('input', () => {
             if (cardNumberInput.value.length > 16) {
@@ -44,7 +44,7 @@ function useCards() {
     }
 
     const onChangeExpirationMonth = (newValue) => {
-        // Limitamos la cantidad de carácteres a 2
+        // Limitamos la cantidad de caracteres a 2
         const input = document.querySelector('#first-date-input');
         input.addEventListener('input', () => {
             if (input.value.length > 2) {
